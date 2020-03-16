@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .all {
+            width: 100%;
+                   background-color: #aaa;
+            text-align: center;
+    
+           
+         
+            
+        }
+
+        .card_time p{
+            height: 80px;
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            line-height: 80px;
+         
+        }
+
+        .cards {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 20%;
+            border-radius: 20px;
+            background-color: #8bc1e0;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .card p {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="card_time"></div>
+
+        <div class="cards">
+
+        </div>
+    </div>
+
+
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-F0BF14D1-E92D-41E9-B5DE-53348FD4798D')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (weahters) {
+
+                // console.log(weahters.records.location[0].weatherElement[0].time[0].parameter.parameterName);
+
+                var locations = weahters.records.location
+                console.log(locations)
+
+                // var wx = location[0].weatherElement[0]
+                // console.log(wx)
+
+                // var ci = location[0].weatherElement[3]
+                // console.log(ci)
+
+                // var pop = location[0].weatherElement[1]
+                // console.log(pop)
+
+                // var maxT = location[0].weatherElement[4]
+                // console.log(maxT)
+
+                // var mminT = location[0].weatherElement[2]
+                // console.log(minT)
+
+
+
+
+                locations.forEach(location => {
+                    var location_Name = location.locationName; //位置
+                    console.log(location_Name)
+
+
+                    var Wx = location.weatherElement[0].time[0].parameter.parameterName;
+                    // console.log(Wx)
+
+                    var Ci = location.weatherElement[3].time[0].parameter.parameterName;
+                    // console.log(Ci)
+
+                    var Pop = location.weatherElement[1].time[0].parameter.parameterName;
+                    // console.log(Pop)
+
+                    var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
+                    // console.log(maxT)
+
+                    var MinT = location.weatherElement[2].time[0].parameter.parameterName;
+                    // console.log(MinT)
+
+                    var TUNit = location.weatherElement[2].time[0].parameter.parameterUnit;
+                    // console.log(TUNit)
+
+                    var Wx_code = location.weatherElement[0].time[0].parameter.parameterValue;
+                    // console.log(Wx_code)
+
+                    if (Wx_code == 1) {
+                        var weather_icon = './img/weather/sun.png'
+                    } else if (Wx_code == 2 || Wx_code == 3) {
+                        var weather_icon = './img/weather/cloudy.png'
+                    }else if (Wx_code == 4|| Wx_code == 5 || Wx_code == 6 || Wx_code == 7) {
+                        var weather_icon = './img/weather/cloudy.png'
+                    }else if (Wx_code == 8|| Wx_code == 9 || Wx_code == 10 || Wx_code == 11) {
+                        var weather_icon = './img/weather/cloud.png'
+                    }else {
+                        var weather_icon = './img/weather/rain.png'
+                    };
+                    var cards = document.querySelector('.cards');
+                    // console.log(cards)
+
+                    cards.innerHTML += `
+                            <div class="card">
+                                <div class="card_img">
+                                    <img width="100px" src="${weather_icon}" alt="">
+                                </div>
+                                <h1>${location_Name}</h1>
+                                <h2>${Wx}</h2>
+                                
+                                <p>舒適度:${Ci}</p>
+                                <p>=================</p>
+                                <p>最高溫:${MaxT}${TUNit}</p>
+                                <p>最低溫${MinT}${TUNit}</p>
+                                <p>=================</p>
+                                
+                            </div>
+                        `
+                    //             cards.innerHTML += `
+                    // <div class="card">
+                    // <h2 >${drink.name}</h2>
+                    // <div class="produet_img">
+                    //     <img src=${drink.produet_img} alt="">                
+                    // </div>
+                    // <p >${drink.Sales}</p>
+                    // <p >${drink.formt}</p>
+                    // <p >${drink.prise}</p>
+                    // <p >${drink.content}</p>               
+                    // </div>
+
+                    // `
+
+
+                });
+
+                var today = new Date();
+                var today_day = today.getFullYear() + '年' + (today.getMonth() + 1) + '月' + today.getDate() + '日';
+
+                var today_time = today.getHours() + ':' + today.getMinutes();
+                // console.log(cards_time)
+                var card_time = document.querySelector('.card_time');
+                console.log(card_time)
+
+                card_time.innerHTML += `
+                <p>日期：${today_day}</p><br>
+                <p>時間：${today_time}</p> 
+                `
+
+
+            });
+    </script>
+</body>
+
+</html>

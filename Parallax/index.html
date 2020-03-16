@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    #navbar {
+        width: calc(80% - 20px);
+        /* background-color: slateblue; */
+        margin: auto;
+        padding: 10px 10px;
+        position: fixed;
+        left: 10%;
+
+    }
+
+    #avatar {
+        background-color: skyblue;
+        background-image: url("img/fish_avatar.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        box-shadow: 6px 6px 2px rgba(0, 0, 10, 0.3);
+        float: left;
+    }
+
+    .menubar {
+        /* background-color: salmon; */
+        float: right;
+        /* padding-top: 60px; */
+        position: absolute;
+        right: 10px;
+        top: 30px;
+
+
+    }
+
+    .menubar_btn {
+        background-color: rgb(255, 166, 0);
+        width: 50px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        float: left;
+        margin-left: 10px;
+        border-radius: 10px;
+        border: 3px outset rgba(124, 81, 1, 0.534);
+    }
+
+    .menubar_btn:hover {
+        /* transform: scale(1.2) */
+        transform: scale(1.2);
+        transition: all 0.5s ease 0s;
+    }
+
+    .menubar_btn:active {
+        color: honeydew;
+    }
+
+    #clearfly {
+        clear: both;
+    }
+
+    #section-1 {
+        background-image: url("img/moonA.jpg");
+    }
+
+    #section-2 {
+        background-image: url("img/moonB.jpg");
+    }
+
+    #section-3 {
+        background-image: url("img/moonC.jpg");
+    }
+
+    .section_style {
+        width: 80%;
+        height: 50vh;
+        margin: auto;
+        padding-top: 50vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .mask {
+        background-color: rgba(0, 0, 255, 0.2);
+        width: 100%;
+        margin: auto;
+        padding: calc(25vh - 50px) 0;
+    }
+
+    .btn {
+        background-color: rgba(4, 4, 226, 0.4));
+        width: 200px;
+        height: 100px;
+        border-radius: 15px;
+        border: 2px solid gray;
+        margin: auto;
+    }
+
+    .btn:hover {
+        background-color: green;
+        transition: 0.5s;
+    }
+
+    .btn:active {
+        background-color: gray;
+        transition: 0.5s;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="navbar">
+            <div id="avatar"></div>
+            <div class="menubar">
+                <a href="#section-1">
+                    <div class="menubar_btn">A頁</div>
+                </a>
+                <a href="#section-2">
+                    <div class="menubar_btn">B頁</div>
+                </a>
+                <a href="#section-3">
+                    <div class="menubar_btn">C頁</div>
+                </a>
+            </div>
+            <div class="clearfly"></div>
+        </div>
+        <div id="section-1" class="section_style">
+            <div class="mask">
+                <div class="btn"></div>
+            </div>
+        </div>
+        <div id="section-2" class="section_style">
+            <div class="mask">
+                <div class="btn"></div>
+            </div>
+        </div>
+        <div id="section-3" class="section_style">
+            <div class="mask">
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

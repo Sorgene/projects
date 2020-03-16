@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    #all {
+        background-color: gray;
+    }
+
+    /* @media screen and (min-width:0px) { */
+        .navbar {
+            background-color: green;
+            width: 100%;
+            height: 80px;
+            padding: 13px;
+            position: relative;
+        }
+
+        #logo {
+            background-image: url("img/acvatar-fish.jpg");
+            background-size: cover;
+            width: 55px;
+            height: 55px;
+            border-radius: 8%;
+            margin: auto;
+        }
+
+        .touch {
+            background-color: #faa;
+            border-radius: 8%;
+            width: 40px;
+            height: 50px;
+            float: left;
+            position: absolute;
+            bottom: 15px;
+        }
+
+        .touch:hover {
+            background-color: rgba(225, 108, 180, 0.5);
+        }
+
+        .touch:hover ~ ul {
+            /* display: block; */
+            left: -12%;
+        }
+        ul {
+            /* display: none; */
+            position: absolute;
+            top: 64px;
+            left: -100%;
+            transition: 0.5s;
+            /* padding: 0;
+            margin: 0; */
+        }
+
+        li {
+            background-color: rgb(99, 179, 179);
+            width: 100px;
+            border: 1px dashed rgb(0, 0, 0);
+            list-style-type: none;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        .boxbar {
+            background-color: khaki;
+            width: 100%;
+            height: calc(100vh - 80px);
+
+        }
+
+        .box {
+            /* background-color: gray; */
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .boxa {
+            background-image: url("img/boxA.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 33%;
+
+        }
+
+        .boxb {
+            background-image: url("img/boxB.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 34%;
+
+        }
+
+        .boxc {
+            background-image: url("img/boxC.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 33%;
+
+        }
+
+        .mask {
+            background-color: rgba(225, 220, 220, 0.6);
+            float: left;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .mask:hover {
+            background-color: rgba(225, 108, 180, 0.0);
+            transition: 0.5s;
+
+        }
+    /* } */
+
+    @media screen and (min-width:702px) {
+        .navbar {
+
+            width: 100%;
+            height: 100px;
+            float: left;
+            padding: 10px 20px;
+        }
+
+        #logo {
+            width: 80px;
+            height: 80px;
+            float: left;
+
+        }
+
+        .touch {
+            display: none;
+        }
+
+        .txt {   
+            padding-top: 30px;         
+            display: unset;            
+            float: right;
+            }
+
+
+
+        li {
+            
+            display: inline;
+        }
+
+
+
+        .boxbar {
+
+            width: 100%;
+            height: 100vh;
+            float: left;
+            padding: calc(50vh - 400px) 0;
+        }
+
+        .box {
+            width: 700px;
+            height: 800px;
+            margin: auto;
+        }
+
+        .style_float {
+            float: left;
+        }
+
+        .boxa {
+            height: 50%;
+            margin-bottom: 10px;
+        }
+
+        .boxb {
+            width: calc(50% - 5px);
+            height: 390px;
+            margin-right: 5px;
+        }
+
+        .boxc {
+            width: calc(50% - 5px);
+            height: 390px;
+            margin-left: 5px;
+        }
+    }
+
+    @media screen and (min-width:1138px) {
+        .navbar {
+            background-color: green;
+            width: 336px;
+            height: 100vh;
+            float: left;
+            padding-top: 80px;
+        }
+
+        #logo {
+
+            width: 150px;
+            height: 150px;           
+            margin-left: 70px;
+            margin-bottom: 30px;
+        }
+
+        .txt {
+            /* padding: 50px 0; */
+            padding: 0;
+            margin-right: 100px;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .boxbar {
+            width: calc(100% - 336px);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            padding: calc(50vh - 285px) 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 570px;
+        }
+
+        .boxa {
+
+            width: 100%;
+            height: 285px;
+        }
+
+        .boxb {
+            width: calc(50% - 5px);
+            height: 275px;
+        }
+
+        .boxc {
+            width: calc(50% - 5px);
+            height: 275px;
+        }
+    }
+
+    @media screen and (min-width:1297px) {
+     
+
+        .boxbar {
+            /* width: 1584px; */
+            height: 100vh;
+        }
+
+        .box {
+
+            width: 965px;
+            height: 570px;
+
+        }
+
+
+
+        .boxa {
+
+            width: 315px;
+            height: 570px;
+            margin-right: 10px;
+        }
+
+        .boxb {
+
+            width: 315px;
+            height: 570px;
+            margin-right: 10px;
+        }
+
+        .boxc {
+
+            width: 315px;
+            height: 570px;
+            margin: 0;
+        }
+
+
+
+    }
+</style>
+
+<body>
+    <div id="all">
+        <div class="navbar">
+            <div id="logo"></div>
+            <div class="touch"></div>
+            <ul>
+                <li><a href="" target="_blank" title="">AAA</a></li>
+                <li><a href=""></a>BBB</li>
+                <li><a href=""></a>CCC</li>
+            </ul>
+        </div>
+        <div class="boxbar">
+            <div class="box">
+                <div class="boxa style_float">
+                    <div class="mask"></div>
+                </div>
+                <div class="boxb style_float">
+                    <div class="mask"></div>
+                </div>
+                <div class="boxc style_float">
+                    <div class="mask"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

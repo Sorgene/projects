@@ -88,42 +88,24 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 1460px) {
-  .all .headerInner .navigation .navigationList .navigationListItem {
-    padding: 0px 60px 0px 120px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .all .headerInner .navigation .navigationList .navigationListItem {
-    padding: 0px 0px 0px 120px;
-  }
-}
-
-@media (max-width: 767px) {
-  .all .headerInner .navigation .navigationList .navigationListItem {
-    display: none;
-  }
-}
-
 .all .headerInner .navigation .navigationList .navigationListItem a {
   color: #fff;
   text-decoration: none;
 }
 
-.all .headerInner .navigation .navigationList .navigationListItem:hover .web {
+.all .headerInner .navigation .navigationList .navigationListItem .web:hover {
   color: #258ede;
 }
 
-.all .headerInner .navigation .navigationList .navigationListItem:hover .windows {
+.all .headerInner .navigation .navigationList .navigationListItem .windows:hover {
   color: #4fe5ff;
 }
 
-.all .headerInner .navigation .navigationList .navigationListItem:hover .ios {
+.all .headerInner .navigation .navigationList .navigationListItem .ios:hover {
   color: #cf8fff;
 }
 
-.all .headerInner .navigation .navigationList .navigationListItem:hover .android:hover {
+.all .headerInner .navigation .navigationList .navigationListItem .android:hover:hover {
   color: #69e56e;
 }
 
@@ -132,25 +114,25 @@ body {
   overflow: hidden;
 }
 
-.all .styledIntroductio {
+.all .styledMain .styledIntroductio {
   width: 100%;
   padding: 145px 0px 60px;
   background-color: black;
 }
 
-.all .styledIntroductio .inner {
+.all .styledMain .styledIntroductio .inner {
   width: 1536px;
   margin: 0px auto;
 }
 
-.all .styledIntroductio .inner .content {
+.all .styledMain .styledIntroductio .inner .content {
   width: 410px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
 
-.all .styledIntroductio .inner .content .title .hading {
+.all .styledMain .styledIntroductio .inner .content .title .hading {
   font-size: 64px;
   line-height: 80px;
   color: #4fe5ff;
@@ -158,7 +140,7 @@ body {
   margin: 0px 0px 0px -6px;
 }
 
-.all .styledIntroductio .inner .content .description p {
+.all .styledMain .styledIntroductio .inner .content .description p {
   color: white;
   font-size: 16px;
   line-height: 24px;
@@ -166,31 +148,31 @@ body {
   margin: 0px 0px 24px;
 }
 
-.all .styledIntroductio .inner .media {
+.all .styledMain .styledIntroductio .inner .media {
   padding: 0 380px;
   position: relative;
 }
 
-.all .styledIntroductio .inner .media .leftLine {
+.all .styledMain .styledIntroductio .inner .media .leftLine {
   position: absolute;
   top: -15px;
   right: 180px;
 }
 
-.all .styledIntroductio .inner .media .rightLine {
+.all .styledMain .styledIntroductio .inner .media .rightLine {
   position: absolute;
   bottom: 155px;
   left: 180px;
 }
 
-.styledPlatforms {
+.all .styledPlatforms {
   width: 100%;
   position: relative;
   background-color: black;
   background-color: #2280c8;
 }
 
-.styledPlatforms::before {
+.all .styledPlatforms::before {
   content: "";
   width: 50vw;
   height: 100%;
@@ -201,7 +183,7 @@ body {
   background-color: #2280c8;
 }
 
-.styledPlatforms::after {
+.all .styledPlatforms::after {
   content: "";
   width: 50vw;
   height: 100%;
@@ -212,77 +194,77 @@ body {
   background-color: #5fcf63;
 }
 
-.styledPlatforms .inner {
+.all .styledPlatforms .inner {
   width: 1536px;
   margin: auto;
   z-index: 2;
 }
 
-.styledPlatforms .inner .grid {
+.all .styledPlatforms .inner .grid {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
-.styledPlatforms .inner .grid .platform {
+.all .styledPlatforms .inner .grid .platform {
   height: 384px;
   position: relative;
   z-index: 2;
   padding: 26px 26px 10px 26px;
 }
 
-.styledPlatforms .inner .grid .platform .icon {
+.all .styledPlatforms .inner .grid .platform .icon {
   min-height: 96px;
   width: 100%;
   height: 200px;
   text-align: left;
 }
 
-.styledPlatforms .inner .grid .platform .content {
+.all .styledPlatforms .inner .grid .platform .content {
   color: black;
 }
 
-.styledPlatforms .inner .grid .platform .content h2 {
+.all .styledPlatforms .inner .grid .platform .content h2 {
   margin: 0 0 26px;
 }
 
-.styledPlatforms .inner .grid .platform .action {
+.all .styledPlatforms .inner .grid .platform .action {
   color: black;
 }
 
-.styledPlatforms .inner .grid .web {
+.all .styledPlatforms .inner .grid .web {
   background-color: #258ede;
 }
 
-.styledPlatforms .inner .grid .web:hover {
+.all .styledPlatforms .inner .grid .web:hover {
   background-color: #3a7ace;
 }
 
-.styledPlatforms .inner .grid .windows {
+.all .styledPlatforms .inner .grid .windows {
   background-color: #4fe5ff;
 }
 
-.styledPlatforms .inner .grid .windows:hover {
+.all .styledPlatforms .inner .grid .windows:hover {
   background-color: #5edcf5;
 }
 
-.styledPlatforms .inner .grid .iOS {
+.all .styledPlatforms .inner .grid .iOS {
   background-color: #cf8fff;
 }
 
-.styledPlatforms .inner .grid .iOS:hover {
+.all .styledPlatforms .inner .grid .iOS:hover {
   background-color: #dd82dd;
 }
 
-.styledPlatforms .inner .grid .android {
+.all .styledPlatforms .inner .grid .android {
   background-color: #69e56e;
 }
 
-.styledPlatforms .inner .grid .android:hover {
+.all .styledPlatforms .inner .grid .android:hover {
   background-color: #90da90;
 }
 
-.styledEveryDevice {
+.all .styledEveryDevice {
   width: 100%;
   min-height: 768px;
   background-image: url("../img/styledEveryDevice.jpg");
@@ -291,23 +273,23 @@ body {
   background-attachment: fixed;
 }
 
-.styledEveryDevice .inner {
+.all .styledEveryDevice .inner {
   width: 1536px;
   margin: 0px auto;
 }
 
-.styledEveryDevice .inner .title {
+.all .styledEveryDevice .inner .title {
   color: black;
   font-size: 128px;
   line-height: 150px;
   font-weight: 600;
 }
 
-.styledEveryDevice .inner .title h2 {
+.all .styledEveryDevice .inner .title h2 {
   font-size: 128px;
 }
 
-.styledEveryDevice .inner .content {
+.all .styledEveryDevice .inner .content {
   width: 100%;
   max-width: 384px;
   padding: 0px 16px 0px 24px;
@@ -317,21 +299,21 @@ body {
   margin: 0px;
 }
 
-.styledEveryDevice .inner .content p {
+.all .styledEveryDevice .inner .content p {
   font-size: 16px;
 }
 
-.styledTerraformSphere {
+.all .styledTerraformSphere {
   width: 100%;
 }
 
-.styledTerraformSphere .inner {
+.all .styledTerraformSphere .inner {
   position: relative;
   width: 1536px;
   margin: auto;
 }
 
-.styledTerraformSphere .inner .rect {
+.all .styledTerraformSphere .inner .rect {
   position: absolute;
   top: -200px;
   right: 130px;
@@ -339,14 +321,14 @@ body {
   z-index: 4;
 }
 
-.styledTerraformSphere .inner .line {
+.all .styledTerraformSphere .inner .line {
   position: absolute;
   top: 570px;
   left: 190px;
   pointer-events: none;
 }
 
-.styledTerraformSphere .inner .sphere {
+.all .styledTerraformSphere .inner .sphere {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,28 +341,28 @@ body {
           align-items: center;
 }
 
-.styledTerraformDescription {
+.all .styledTerraformDescription {
   width: 100%;
 }
 
-.styledTerraformDescription .inner {
+.all .styledTerraformDescription .inner {
   width: 1536px;
   height: 146px;
   margin: auto;
 }
 
-.styledTerraformDescription .inner .content {
+.all .styledTerraformDescription .inner .content {
   width: 352px;
   margin-left: auto;
   color: #fff;
 }
 
-.styledIntuitivePowerful {
+.all .styledIntuitivePowerful {
   width: 100%;
   position: relative;
 }
 
-.styledIntuitivePowerful .title {
+.all .styledIntuitivePowerful .title {
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -392,39 +374,38 @@ body {
   padding-left: 160px;
 }
 
-.styledIntuitivePowerful .title .inner {
+.all .styledIntuitivePowerful .title .inner {
   width: 1536px;
   position: absolute;
   bottom: -580px;
-  z-index: 2;
 }
 
-.styledIntuitivePowerful .title .inner h2 {
+.all .styledIntuitivePowerful .title .inner h2 {
   font-size: 128px;
   line-height: 144px;
   font-weight: 600;
 }
 
-.styledIntuitivePowerful .title .inner .planes {
+.all .styledIntuitivePowerful .title .inner .planes {
   position: absolute;
   top: -240px;
   right: -260px;
   width: 768px;
 }
 
-.styledIntuitivePowerful .title .inner .deHeader {
+.all .styledIntuitivePowerful .title .inner .deHeader {
   position: absolute;
   top: -100px;
   left: 0px;
 }
 
-.styledIntuitivePowerful .title .inner .signHeader {
+.all .styledIntuitivePowerful .title .inner .signHeader {
   position: absolute;
   top: 140px;
   right: -30px;
 }
 
-.styledClouds {
+.all .styledClouds {
   background-image: url(../img/clouds.jpg);
   background-size: cover;
   background-position: center;
@@ -435,81 +416,81 @@ body {
   top: 0px;
 }
 
-.styledClouds .inner {
+.all .styledClouds .inner {
   width: 1536px;
 }
 
-.styledClouds .inner .planes {
+.all .styledClouds .inner .planes {
   position: absolute;
   top: -240px;
   right: -260px;
 }
 
-.styledClouds .inner .planes .solidPlane {
+.all .styledClouds .inner .planes .solidPlane {
   position: absolute;
   top: -120px;
   left: 2px;
 }
 
-.styledClouds .inner .planes .outlinePlane {
+.all .styledClouds .inner .planes .outlinePlane {
   width: 100%;
 }
 
-.styledClouds .deHeader {
+.all .styledClouds .deHeader {
   position: absolute;
   top: -135px;
   left: 240px;
   font-size: 395px;
 }
 
-.styledClouds .signHeader {
+.all .styledClouds .signHeader {
   position: absolute;
   top: 130px;
   right: 65px;
   font-size: 395px;
 }
 
-.styledClouds .lineBlack {
+.all .styledClouds .lineBlack {
   position: absolute;
   top: 570px;
   left: 620px;
 }
 
-.styledEngagingImmersive {
+.all .styledEngagingImmersive {
   width: 100%;
   position: relative;
   min-height: 820px;
   background-color: #cccccc;
 }
 
-.styledEngagingImmersive .inner {
+.all .styledEngagingImmersive .inner {
   width: 1536px;
   margin: auto;
   padding: 140px 40px 0px 8px;
 }
 
-.styledEngagingImmersive .inner .title .text {
+.all .styledEngagingImmersive .inner .title .text {
   width: 100%;
   font-size: 128px;
   line-height: 150px;
   font-weight: 600;
 }
 
-.styledEngagingImmersive .inner .content {
+.all .styledEngagingImmersive .inner .content {
   width: 100%;
   margin: 60px 0px 0px;
   max-width: 384px;
   padding: 0px 16px;
 }
 
-.styledEngagingImmersive .inner .content .contentBlock {
+.all .styledEngagingImmersive .inner .content .contentBlock {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   margin: 0px;
 }
 
-.styledEngagingImmersive .media {
+.all .styledEngagingImmersive .media {
   position: absolute;
   top: 200px;
   right: 0px;
@@ -517,30 +498,30 @@ body {
 }
 
 @media (max-width: 1940px) {
-  .styledEngagingImmersive .media {
+  .all .styledEngagingImmersive .media {
     max-width: 900px;
   }
 }
 
 @media (max-width: 1680px) {
-  .styledEngagingImmersive .media {
+  .all .styledEngagingImmersive .media {
     max-width: 50vw;
   }
 }
 
 @media (max-width: 1024px) {
-  .styledEngagingImmersive .media {
+  .all .styledEngagingImmersive .media {
     max-width: 70vw;
   }
 }
 
 @media (max-width: 767px) {
-  .styledEngagingImmersive .media {
+  .all .styledEngagingImmersive .media {
     max-width: 60vw;
   }
 }
 
-.styledSpace {
+.all .styledSpace {
   width: 100%;
   height: 100vh;
   min-height: 768px;
@@ -550,85 +531,72 @@ body {
   background-attachment: fixed;
 }
 
-.styledSpace .inner {
+.all .styledSpace .inner {
   position: relative;
   width: 1536px;
   margin: auto;
 }
 
-.styledSpace .inner .fluent {
+.all .styledSpace .inner .fluent {
   position: absolute;
   top: -95px;
   left: 340px;
 }
 
-.styledSpace .inner .line {
+.all .styledSpace .inner .line {
   position: absolute;
   top: 185px;
   left: 165px;
 }
 
-.styledSpace .inner .whiteRect {
+.all .styledSpace .inner .whiteRect {
   position: absolute;
   top: -125px;
   left: 620px;
 }
 
-.styledSpace .inner .whitePlane {
+.all .styledSpace .inner .whitePlane {
   position: absolute;
   top: 530px;
   right: 85px;
 }
 
-.styledSpace .inner .lilacRect {
+.all .styledSpace .inner .lilacRect {
   position: absolute;
   top: 370px;
   right: 220px;
 }
 
-.styledMedia {
+.all .styledMedia {
   position: relative;
-  width: 100%;
   z-index: 1;
   width: 100%;
   margin: 0px 0px 160px;
 }
 
-@media (max-width: 1024px) {
-  .styledMedia {
-    margin: 0px 0px 60px;
-  }
-}
-
-@media (max-width: 960px) {
-  .styledMedia {
-    margin: 0px;
-  }
-}
-
-.styledMedia .inner {
+.all .styledMedia .inner {
   position: relative;
   z-index: 2;
   width: 1536px;
   margin: auto;
 }
 
-.styledMedia .inner .grid {
+.all .styledMedia .inner .grid {
   width: 100%;
   position: relative;
 }
 
-.styledMedia .inner .grid .item {
+.all .styledMedia .inner .grid .item {
   position: relative;
   z-index: 2;
   padding: 16px;
 }
 
-.styledMedia .inner .grid .item a {
+.all .styledMedia .inner .grid .item a {
   text-decoration: none;
 }
 
-.styledMedia .inner .grid .item a .content {
+.all .styledMedia .inner .grid .item a .content {
   width: 100%;
   height: 384px;
   padding: 16px;
@@ -638,60 +606,60 @@ body {
   font-weight: 600;
 }
 
-.styledMedia .inner .grid .item a .source {
+.all .styledMedia .inner .grid .item a .source {
   width: 100%;
   padding: 16px;
 }
 
-.styledMedia .inner .grid .item a .source .title {
+.all .styledMedia .inner .grid .item a .source .title {
   color: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(1) {
+.all .styledMedia .inner .grid .item:nth-child(1) {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.styledMedia .inner .grid .item:nth-child(1) .icon {
+.all .styledMedia .inner .grid .item:nth-child(1) .icon {
   fill: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(1):hover, .styledMedia .inner .grid .item:nth-child(1):focus, .styledMedia .inner .grid .item:nth-child(1):active {
+.all .styledMedia .inner .grid .item:nth-child(1):hover, .all .styledMedia .inner .grid .item:nth-child(1):focus, .all .styledMedia .inner .grid .item:nth-child(1):active {
   background-color: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(1):hover .icon, .styledMedia .inner .grid .item:nth-child(1):focus .icon, .styledMedia .inner .grid .item:nth-child(1):active .icon {
+.all .styledMedia .inner .grid .item:nth-child(1):hover .icon, .all .styledMedia .inner .grid .item:nth-child(1):focus .icon, .all .styledMedia .inner .grid .item:nth-child(1):active .icon {
   fill: black;
 }
 
-.styledMedia .inner .grid .item:nth-child(2) {
+.all .styledMedia .inner .grid .item:nth-child(2) {
   background-color: gray;
 }
 
-.styledMedia .inner .grid .item:nth-child(2) .icon {
+.all .styledMedia .inner .grid .item:nth-child(2) .icon {
   fill: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(2):hover, .styledMedia .inner .grid .item:nth-child(2):focus, .styledMedia .inner .grid .item:nth-child(2):active {
+.all .styledMedia .inner .grid .item:nth-child(2):hover, .all .styledMedia .inner .grid .item:nth-child(2):focus, .all .styledMedia .inner .grid .item:nth-child(2):active {
   background-color: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(2):hover .icon, .styledMedia .inner .grid .item:nth-child(2):focus .icon, .styledMedia .inner .grid .item:nth-child(2):active .icon {
+.all .styledMedia .inner .grid .item:nth-child(2):hover .icon, .all .styledMedia .inner .grid .item:nth-child(2):focus .icon, .all .styledMedia .inner .grid .item:nth-child(2):active .icon {
   fill: black;
 }
 
-.styledMedia .inner .grid .item:nth-child(3) {
+.all .styledMedia .inner .grid .item:nth-child(3) {
   background-color: darkgray;
 }
 
-.styledMedia .inner .grid .item:nth-child(3):hover, .styledMedia .inner .grid .item:nth-child(3):focus, .styledMedia .inner .grid .item:nth-child(3):active {
+.all .styledMedia .inner .grid .item:nth-child(3):hover, .all .styledMedia .inner .grid .item:nth-child(3):focus, .all .styledMedia .inner .grid .item:nth-child(3):active {
   background-color: white;
 }
 
-.styledMedia .inner .grid .item:nth-child(4) {
+.all .styledMedia .inner .grid .item:nth-child(4) {
   background-color: gainsboro;
 }
 
-.styledMedia .inner .grid .item:nth-child(4):hover, .styledMedia .inner .grid .item:nth-child(4):focus, .styledMedia .inner .grid .item:nth-child(4):active {
+.all .styledMedia .inner .grid .item:nth-child(4):hover, .all .styledMedia .inner .grid .item:nth-child(4):focus, .all .styledMedia .inner .grid .item:nth-child(4):active {
   background-color: white;
 }
 
@@ -741,6 +709,7 @@ body {
 }
 
 .styledFooter .inner {
+  background-color: green;
   width: 1536px;
   margin: auto;
   display: -webkit-box;
@@ -754,173 +723,42 @@ body {
 .styledFooter .inner .logo {
   width: 190px;
   height: 48px;
-  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
-@media (max-width: 1280px) {
-  .styledFooter .inner .logo {
-    width: 40px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .styledFooter .inner .logo {
-    width: 80px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-right: auto;
-  }
+.styledFooter .inner .logo a {
+  width: 16px;
+  height: 16px;
+  margin: 0 0 10px;
+  fill: white;
 }
 
 .styledFooter .inner .logo a svg {
-  fill: white;
-  width: 16px;
-  line-height: 48px;
-}
-
-.styledFooter .inner .logo:hover .microsoft-red {
-  fill: #f25022;
-  -webkit-transition: 0.4;
-  transition: 0.4;
-}
-
-.styledFooter .inner .logo:hover .microsoft-green {
-  fill: #7fba00;
-  -webkit-transition: 0.8;
-  transition: 0.8;
-}
-
-.styledFooter .inner .logo:hover .microsoft-blue {
-  fill: #00a4ef;
-  -webkit-transition: 1.2;
-  transition: 1.2;
-}
-
-.styledFooter .inner .logo:hover .microsoft-yellow {
-  fill: #ffb900;
-  -webkit-transition: 1.6;
-  transition: 1.6;
-}
-
-.styledFooter .inner .logo svg {
   cursor: pointer;
 }
 
 .styledFooter .inner .navigation {
   height: 48px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   padding: 0px 100px 0px 0px;
-}
-
-@media (max-width: 1024px) {
-  .styledFooter .inner .navigation {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    padding: 0;
-  }
 }
 
 .styledFooter .inner .navigation .navigationList {
   width: 100%;
-  color: white;
 }
 
-.styledFooter .inner .navigation .navigationList .navigationListItem {
+.styledFooter .inner .navigation .navigationList .navigationListItem a {
   width: auto;
   color: white;
   font-size: 12px;
   line-height: 48px;
   font-weight: 400;
-  margin: 0px;
-  padding: 0px;
 }
-
-.styledFooter .inner .navigation .navigationList .navigationListItem a {
-  color: white;
-  position: relative;
-}
-
-.styledFooter .inner .navigation .navigationList .navigationListItem a:hover {
-  color: white;
-  opacity: 0.6;
-}
-
-.styledFooter .inner .navigation .navigationList .navigationListItem a:hover::after {
-  opacity: 1;
-  bottom: -2px;
-}
-
-.styledFooter .inner .navigation .navigationList .navigationListItem a::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -6px;
-  width: 100%;
-  opacity: 0;
-  height: 1px;
-  background-color: white;
-  -webkit-transition: all 200ms linear 0ms;
-  transition: all 200ms linear 0ms;
-}
-
-.Social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 48px;
-}
-
-.Social a {
-  width: 48px;
-  height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-@media (max-width: 500px) {
-  .Social a {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-.Social a svg {
-  width: 20px;
-}
-
-.Social a svg path {
-  fill: white;
-}
-
-.Social a:hover .linkedin path {
-  fill: #0077b5;
-}
-
-.Social a:hover .dribbble path {
-  fill: #ea4c89;
-}
-
-.Social a:hover .twitter path {
-  fill: #38a1f3;
-}
-
-.Social a:hover .medium path {
-  fill: #00ab6c;
-}
-
-.Social a:hover .facebook path {
-  fill: #3b5998;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style - 複製.css.map */

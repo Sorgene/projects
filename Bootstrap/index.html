@@ -129,20 +129,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <script>
-        var today = new Date();
-        var today_day = today.getFullYear() + '年' + (today.getMonth() + 1) + '月' + today.getDate() + '日';
-
-        var today_time = today.getHours() + ':' + today.getMinutes();
-        // console.log(cards_time)
-        var card_time = document.querySelector('.card_txt');
-        console.log(card_txt)
-
-        card_time.innerHTML += `
-                <p>日期：${today_day}</p><br>
-                <p>時間：${today_time}</p> 
-                `
-    </script>
+   
 </body>
 
 </html>

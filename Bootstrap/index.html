@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bootstrap </title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,49 +13,56 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+
+<body onload="ShowTime()">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 ">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">Link</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
+
+
+
 
 
     <main>
 
         <section class="cards">
+
+            <!-- parallax 遮罩 標題 -->
+
+            <div class="cardB d-flex justify-content-center align-items-center mb-3">
+                <div class="cardB_img d-flex justify-content-center align-items-center">
+                    <div class="cardB_txt card_time text-center text-white rounded-pill bg-info ">
+                        <a href=""></a>
+                        <p id="card_day"><br>
+                            <p id="card_time"></p>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            
             <!-- 左圖右文字 -->
             <div class="cardA container mb-3">
                 <div class="row">
@@ -71,15 +78,9 @@
                     </div>
                 </div>
             </div>
-            <!-- parallax 遮罩 標題 -->
 
-            <div class="cardB container d-flex justify-content-center align-items-center mb-3">
-                <div class="cardB_img d-flex justify-content-center align-items-center">
-                    <span class="cardB_txt text-center text-white rounded-pill bg-info ">Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Aspernatur, pariatur!</span>
-                </div>
 
-            </div>
+
 
 
             <!-- 三張卡片均分 container -->
@@ -119,6 +120,8 @@
         <span class="footer_text p-5 ">此頁面內容僅為全端與Python資訊探勘工程師養成班使用</span>
     </footer>
 
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -128,8 +131,40 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!-- <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-F0BF14D1-E92D-41E9-B5DE-53348FD4798D')
+          
+            .then(function () {
+                var today = new Date();
+                var today_day = today.getFullYear() + '年' + (today.getMonth() + 1) + '月' + today.getDate() + '日';
 
-   
+                var today_time = today.getHours() + ':' + today.getMinutes()+ today.getSeconds();
+                // console.log(cards_time)
+                var card_time = document.querySelector('.card_time');
+                console.log(card_time)
+
+                card_time.innerHTML += `
+            <p>日期：${today_day}</p>
+            <p>時間：${today_time}</p> 
+            `
+
+
+            }); -->
+    </script>
+    <script language="JavaScript">
+        function ShowTime() {
+            var NowDate = new Date();
+            var Y = NowDate.getUTCFullYear();
+            var M = NowDate.getMonth() + 1;
+            var D = NowDate.getDate();
+            var h = NowDate.getHours();
+            var m = NowDate.getMinutes();
+            var s = NowDate.getSeconds();
+            document.getElementById('card_day').innerHTML = Y + '年' + M + '月' + D + '日';
+            document.getElementById('card_time').innerHTML = h + '時' + m + '分' + s + '秒';
+            setTimeout('ShowTime()', 1000);
+        };
+    </script>
 </body>
 
 </html>

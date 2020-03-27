@@ -18,24 +18,21 @@
 
         .all {
             width: 100%;
-                   background-color: #aaa;
+            background-color: #aaa;
             text-align: center;
-    
-           
-         
-            
+
         }
 
-        .card_time p{
+        .card_time p {
             height: 80px;
             margin: 0;
             padding: 0;
             font-size: 50px;
             line-height: 80px;
-         
+
         }
 
-        .cards {            
+        .cards {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,9 +95,6 @@
                 // var mminT = location[0].weatherElement[2]
                 // console.log(minT)
 
-
-
-
                 locations.forEach(location => {
                     var location_Name = location.locationName; //位置
                     console.log(location_Name)
@@ -131,11 +125,11 @@
                         var weather_icon = './img/weather/sun.png'
                     } else if (Wx_code == 2 || Wx_code == 3) {
                         var weather_icon = './img/weather/cloudy.png'
-                    }else if (Wx_code == 4|| Wx_code == 5 || Wx_code == 6 || Wx_code == 7) {
+                    } else if (Wx_code == 4 || Wx_code == 5 || Wx_code == 6 || Wx_code == 7) {
                         var weather_icon = './img/weather/cloudy.png'
-                    }else if (Wx_code == 8|| Wx_code == 9 || Wx_code == 10 || Wx_code == 11) {
+                    } else if (Wx_code == 8 || Wx_code == 9 || Wx_code == 10 || Wx_code == 11) {
                         var weather_icon = './img/weather/cloud.png'
-                    }else {
+                    } else {
                         var weather_icon = './img/weather/rain.png'
                     };
                     var cards = document.querySelector('.cards');

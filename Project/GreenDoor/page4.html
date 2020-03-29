@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+        * {
+            font-family: 'Noto Sans TC';
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #F2E0C9;
+        }
+
+        .banner {
+            width: 100%;
+            height: calc(100vh - 56px);
+            background-image: url(pic/草地.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+        }
+        
+        .banner p{
+            font-size: 120px;
+            font-family: 'Zhi Mang Xing', cursive;
+            text-align: center;
+            align-self: center;
+            color: white;
+            text-shadow:5px 5px #680E01
+        }
+        .navbar {
+            background-color: #736C49;
+        }
+
+        .back_to_top.show{
+            width: 50px;
+            height: 50px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 10vh;
+            bottom: 50px;
+            background-size: cover;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .mountaintop {
+            position: absolute;
+            bottom: -75px;
+            background-image: url(pic/mountaintop.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .mountainbtm {
+            position: absolute;
+            bottom: 0;
+            background-image: url(pic/mountainbtm.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .title {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .content {
+            width: 100%;
+            position: relative;
+        }
+
+        .col-10::after {
+            content: "";
+            background-color: #261911;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -55px;
+            z-index: 1;
+        }
+
+        .block {
+            height: 60vh;
+            background-color: #D9B991;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 50px;
+            border-radius: 5px;
+        }
+
+        .block::after {
+            content: "";
+            position: absolute;
+            left: -49px;
+            top: 0;
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+            background-color: #D9B991;
+            width: 50px;
+            height: 50px;
+        }
+
+        .block::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: #D9B991;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: -90px;
+            z-index: 2;
+        }
+
+        .block:last-child {
+            margin: 0;
+        }
+
+        .block:last-child::before {
+            position: absolute;
+            bottom: 0;
+            top: inherit;
+        }
+
+        .block:last-child::after {
+            position: absolute;
+            bottom: 0;
+            top: inherit;
+        }
+
+        .block_img {
+            height: 80%;
+            background-color: lightgreen;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .block_text {
+            height: 20%;
+            text-align: center;
+            margin-top: 4vh;
+            color: white;
+        }
+
+
+
+        .content_text {
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 35px;
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+            letter-spacing: 3px;
+            line-height: 30px;
+        }
+
+        .footer p:nth-last-child(1){
+            letter-spacing: 0;
+            line-height: 24px;
+        }
+
+        .textcolor {
+            color: white;
+            text-shadow: 0.5px 0.5px black;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: white;
+        }
+
+        #footer_text {
+            text-align: right;
+        }
+        .nav-link{
+            text-align: center;
+        }
+        .nav-item:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #DCDAD1;
+            width: 0;
+            -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        .nav-item:hover:after {
+            width: 100%;
+        }
+
+        @media (max-width: 992px) {
+
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+        }
+
+
+        @media (max-width: 1200px) {
+            .mountaintop {
+                bottom: -75px;
+            }
+            .back_to_top.show{
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .mountaintop {
+                bottom: -40px;
+            }
+
+            .col-10::after {
+                left: -25px;
+                top: 6px;
+                height: 99%;
+            }
+
+            .block::after {
+                left: -32px;
+            }
+
+            .block::before {
+                left: -53px;
+                top: 6px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .text {
+                font-size: 15px;
+            }
+
+            .footer_text,
+            #footer_text {
+                text-align: center;
+            }
+            .banner p{
+                font-size: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner animated zoomIn slower">
+        <p>森之王子</p>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row collapse navbar-collapse " id="navbarNav">
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link " href="/index.html">關於我們</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page2.html">客房介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page3.html">場地介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page4.html">景點與交通</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="main">
+        <a href="#scenery_top">
+            <div class="back_to_top">
+            </div>
+        </a>
+        <div class="background">
+            <div class="mountaintop" data-paroller-factor="0.2"></div>
+            <div class="mountainbtm"></div>
+        </div>
+        <div class="container" id="scenery_top">
+            <h1 class="title">周邊景點</h1>
+            <div class="row content">
+                <div class="col-2 col-md-2 col-xl-2"></div>
+                <div class="col-10 col-md-10 col-xl-10" data-aos="fade-right" data-aos-easing="linear">
+                    <div class="block one">
+                        <div class="block_img" style="background-image: url(pic/anne.jpg);"></div>
+                        <div class="block_text">
+                            <p class="text">安妮公主花園 #情侶約會. 下午茶</p>
+                        </div>
+                    </div>
+                    <div class="block two">
+                        <div class="block_img" style="background-image: url(pic/manman.jpg);"></div>
+                        <div class="block_text">
+                            <p class="text">漫漫莊園 #深度生態教育與放鬆身心靈</p>
+                        </div>
+                    </div>
+                    <div class="block three">
+                        <div class="block_img" style="background-image: url(pic/smoke.jpg);"></div>
+                        <div class="block_text">
+                            <p class="text">又見一炊煙 #精緻無菜單料理 #遠離喧囂、靜雅襌風</p>
+                        </div>
+                    </div>
+                    <div class="block four">
+                        <div class="block_img" style="background-image: url(pic/cafe.jpg);"></div>
+                        <div class="block_text">
+                            <p class="text">欣品咖啡莊 #手工烘焙咖啡 #景觀咖啡館</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="title">交通資訊</h1>
+            <div class="row content_text">
+                <h2>台中機場</h2>
+                <p>搭計程車 約40min<br>
+                    火車 > 公車 約60min<br>
+                    統聯客運ubus 31<br>
+                    豐原客運Fengyuan Bus 91 270<br>
+                    火車：新烏日站 > 台中站(10-15min一班)</p>
+                <h2>從台中高鐵</h2>
+                <p>搭計程車 約40min<br>
+                    火車 > 公車 約70min</p>
+                <h2>從台中火車站</h2>
+                <p>搭計程車 約30min<br>
+                    火車 > 公車 約50min</p>
+                <h2>預約包車</h2>
+                <p>P:+886-4-35027888<br>
+                    E-mail:hwafutourbus@gmail.com<br>
+                    Line:kf024606</p>
+                <h2 class="textcolor">高速公路</h2>
+                <p class="textcolor">國道1號或3號 -【國道4號】往東勢方向 - 台3線經【石岡】- 新社指標 - 中92
+                    - 台129線 - 中興嶺方向，到達【中興嶺圓環】，中興嶺街一段(水井)上坡直行，
+                    約500公尺處有一間受奉宮約200公尺，注意左邊叉路標誌【藍色電線桿8號】左轉，
+                    開到底為園區停車場。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" footer">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
+                    <span>專線 | Tel 0987-816726<br>
+                        信箱 | Mail morilife520@gmail.com<br>
+                        地址 | Add 台中市新社區永源里井南街28號</span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
+                    <span>寵物友善<br>
+                        親子友善<br>
+                        check in: 4:00<br>
+                        check out: 11:00 </span>
+                </div>
+                <div class="col-12 text-center">
+                    <p>僅供學習使用，如有侵權，請來電告知刪除</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+
+    <script src="jquery.paroller.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        $('.mountaintop').paroller();
+
+        $(".nav-item").click(function () {
+            $(this).addClass("active");
+        });
+
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+
+            if (scrollTop > 500) {
+                $(".back_to_top").addClass("show");
+            } else {
+                $(".back_to_top").removeClass("show");
+            };
+        });
+
+        $(".back_to_top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        })
+    </script>
+
+</body>
+
+</html>

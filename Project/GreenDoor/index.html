@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- ajax -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- google family-->
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        
+        * {
+            margin: 0 auto;
+            font-family: 'Noto Sans TC';
+            /* outline: 1px solid red; */
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        body {
+            background-color: #F2E0C9;
+        }
+
+        .banner {
+            width: 100%;
+            height: calc(100vh - 56px);
+            background-image: url(pic/banner.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+        }
+        .banner p{
+            font-size: 120px;
+            font-family: 'Zhi Mang Xing', cursive;
+            text-align: center;
+            align-self: center;
+            color: white;
+            text-shadow:5px 5px #680E01
+        }
+        .navbar {
+            background-color: #736C49;
+        }
+
+        .back_to_top.show{
+            width: 50px;
+            height: 50px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 10vh;
+            bottom: 50px;
+            background-size: cover;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .mountaintop {
+            position: absolute;
+            bottom: 2vh;
+            background-image: url(pic/mountaintop.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .mountainbtm {
+            position: absolute;
+            bottom: 0;
+            background-image: url(pic/mountainbtm.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .top_title {
+            color: white;
+        }
+
+        .toptext_h1 {
+            position: absolute;
+            padding: 5% 0 0 10%;
+        }
+
+        .toptext_span {
+            position: absolute;
+            padding: 10%;
+        }
+
+        .about_us_title {
+            position: absolute;
+            padding: 0 10%;
+            top: 45%;
+            text-align: center;
+            color: white;
+            font-weight: 900;
+            font-size: 36px;
+        }
+
+        .about_us_content {
+            position: absolute;
+            bottom: 5%;
+            padding: 0 10%
+        }
+
+        .content {
+            width: 100%;
+            background-color: #E6E6E6;
+            height: 50vh;
+            position: relative;
+            color: rgb(243, 243, 243);
+            text-shadow: 0.5px 0.6px #333;
+            font-weight: bolder;
+        }
+
+        .video {
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .video_text {
+            position: absolute;
+            top: 0px;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .black {
+            width: 100%;
+            height: 50vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition-delay: 0.2s;
+            transition-duration: 0.5s;
+        }
+
+        .blackcover {
+            width: 100%;
+            height: 50vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition-delay: 0.2s;
+            transition-duration: 0.5s;
+            position: absolute;
+
+        }
+
+        .content_text {
+            position: absolute;
+            left: 10%;
+            bottom: 5vh;
+        }
+
+        #guestRoom {
+            background-image: url(pic/room.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        #food {
+            background-image: url(pic/food.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #scene {
+            background-image: url(pic/scene.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        #videosection {
+            position: relative;
+        }
+
+        .content_video {
+            width: 100%;
+            background-color: #D9BCA3;
+            height: 70vh;
+            position: relative;
+            padding-bottom: 5vh;
+        }
+
+        .content_video:nth-child(1) {
+            padding-top: 15vh;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content_text_video {
+            position: absolute;
+            top: 5vh;
+            left: 10%;
+            color: rgb(243, 243, 243);
+            text-shadow: 0.5px 0.6px #333;
+            font-weight: bolder;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: white;
+        }
+
+        
+        #footer_text {
+            text-align: right;
+        }
+        .nav-link{
+            text-align: center;
+        }
+        .nav-item:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #DCDAD1;
+            width: 0;
+            -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        .nav-item:hover:after {
+            width: 100%;
+        }
+
+        .black:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+
+        @media (max-width: 992px) {
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+
+            .about_us {
+                width: 100vh;
+            }
+
+            .toptext_h1 {
+                position: absolute;
+                padding: 5% 0 0 10%;
+            }
+
+            .toptext_span {
+                position: absolute;
+                padding: 10%;
+                top: 25px;
+            }
+
+            .about_us_title {
+                position: absolute;
+                top: 40%;
+                text-align: center;
+                color: white;
+                font-weight: 900;
+                font-size: 36px;
+            }
+
+            .about_us_content {
+                position: absolute;
+                bottom: 5%;
+                padding: 0 10%;
+                text-align: center;
+                display: none;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            .col-xl-4 {
+                -ms-flex: 0 0 33.333333%;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                padding-top: 15vh;
+                padding-bottom: 5vh;
+            }
+
+            .content_video {
+                height: 50vh;
+            }
+            
+        }
+
+        @media (max-width: 767px) {
+            .footer_text,
+            #footer_text {
+                text-align: center;
+            }
+            .banner p{
+                font-size: 80px;
+            }
+        }
+
+        @media (max-width:1200px){
+            .back_to_top.show{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner animated zoomIn slower">
+        <p>森之王子</p>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row collapse navbar-collapse " id="navbarNav">
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link " href="#video">關於我們</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="#guest_room">客房介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="#photo_album">場地介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="#scenery">景點與交通</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <a href="#video">
+            <div class="back_to_top">
+            </div>
+        </a>
+        <div class="background">
+            <div class="mountaintop" data-paroller-factor="0.2"></div>
+            <div class="mountainbtm"></div>
+        </div>
+        <div class="container" id="video">
+            <div class="row pb-3 pt-3">
+
+                <div class="about_us col-12 pl-0 pr-0">
+
+                    <!-- <video class="video" width="100%" height="100%" autoplay loop>
+                        <source src="video/sunrise.mp4" type="video/mp4">
+
+                         -->
+
+                    <video autoplay muted loop class="video" width="100%" height="100%">
+                        <source src="video/sunrise.mp4" type="video/mp4">
+                    </video>
+                    <div class="video_text">
+                        <div class="top_title">
+                            <h1 class="toptext toptext_h1">關於我們</h1>
+                            <span class="toptext toptext_span">About Us</span>
+                            <p class="about_us_title toptext">IT'S TIME TO TRAVEL</p>
+                            <p class="about_us_content toptext">一艘大船艦航行在新社的天空，在廣闊蔚藍如海的天際，
+                                迎風感受著天候的詭譎變遷，迎向東方，追逐日出，夕陽西沈，背倚斜陽夜半天空，星光閃爍晝夜美景盡收眼底...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="guest_room" class="row pb-3" data-aos="fade-right" data-aos-duration="2000"
+                data-aos-easing="linear">
+                <div class="content col-12 pl-0 pr-0" id="guestRoom">
+                    <a href="/page2.html">
+                        <div class="black"></div>
+                        <div class="content_text guest_room">
+                            <span>Guest Room</span>
+                            <h1>客房介紹</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="photo_album" class="row pb-3" data-aos="fade-left" data-aos-duration="1500"
+                data-aos-easing="linear">
+                <div class="content col-12 pl-0 pr-0" id="food">
+                    <a href="/page3.html">
+                        <div class="black">
+                            <div class="content_text">
+                                <span>Photo Album</span>
+                                <h1>相簿寫真</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="scenery" class="row pb-3" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                <div class="content col-12 pl-0 pr-0" id="scene">
+                    <a href="/page4.html">
+                        <div class="black">
+                            <div class="content_text">
+                                <span>Scenery</span>
+                                <h1>好玩景點</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row pb-3" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="linear">
+                <div class="content col-12 pl-0 pr-0" id="googlemap">
+                    <div id="map"></div>
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14555.50320753407!2d120.78177387829592!3d24.211128999999993!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf34d838a036dba7!2z5qOu44Gu546L5a2QIOaZr-ingOmkkOW7s-awkeWuvw!5e0!3m2!1szh-TW!2stw!4v1564110739785!5m2!1szh-TW!2stw"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                    <div class="content_text">
+                        <span>Info</span>
+                        <h1>交通資訊</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pb-3" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="linear"
+                id="videosection">
+                <div class="content_video col-12 col-xl-4" id="video">
+                    <div class="wrap">
+                        <iframe id="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/cfT_ClBf9No"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content_video col-12 col-xl-4" id="video">
+                    <div class="wrap">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PuheDIQe7gc"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content_video col-12 col-xl-4" id="video">
+                    <div class="wrap">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BBV-OFW2juE"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content_text_video col-12">
+                    <h1>影片推薦</h1>
+                    <span>Videos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" footer">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
+                    <span>專線 | Tel 0987-816726<br>
+                        信箱 | Mail morilife520@gmail.com<br>
+                        地址 | Add 台中市新社區永源里井南街28號</span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
+                    <span>寵物友善<br>
+                        親子友善<br>
+                        check in: 4:00<br>
+                        check out: 11:00 </span>
+                </div>
+                <div class="col-12 text-center">
+                    <p>僅供學習使用，如有侵權，請來電告知刪除</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="jquery.paroller.min.js"></script>
+    <script>
+        AOS.init();
+
+        $(".nav-item").click(function () {
+            $(this).addClass("active");
+        });
+
+        function initMap() {
+            var uluru = { lat: 24.211132, lng: 120.783232 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 15,
+                    center: uluru,
+                    styles:
+                        [
+                            {
+                                "featureType": "water",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#aee2e0"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#abce83"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#769E72"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "labels.text.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#7B8758"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "labels.text.stroke",
+                                "stylers": [
+                                    {
+                                        "color": "#EBF4A4"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi.park",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "visibility": "simplified"
+                                    },
+                                    {
+                                        "color": "#8dab68"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels.text.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#5B5B3F"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels.text.stroke",
+                                "stylers": [
+                                    {
+                                        "color": "#ABCE83"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels.icon",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#A4C67D"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#9BBF72"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#EBF4A4"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "transit",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry.stroke",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#87ae79"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#7f2200"
+                                    },
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "labels.text.stroke",
+                                "stylers": [
+                                    {
+                                        "color": "#ffffff"
+                                    },
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "weight": 4.1
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "labels.text.fill",
+                                "stylers": [
+                                    {
+                                        "color": "#495421"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative.neighborhood",
+                                "elementType": "labels",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            }
+                        ]
+                });
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+        $('.mountaintop').paroller();
+
+
+         $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+
+            if (scrollTop > 500) {
+                $(".back_to_top").addClass("show");
+            } else {
+                $(".back_to_top").removeClass("show");
+            };
+        });
+
+        $(".back_to_top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        })
+        
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAewqTlA2lMjzPRrZkPT4NoMlBWvPY220&callback=initMap">
+        </script>
+</body>
+
+</html>

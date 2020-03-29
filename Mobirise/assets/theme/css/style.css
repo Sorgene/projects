@@ -895,6 +895,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   opacity: 1;
   -webkit-transition: .2s opacity ease-in-out;
   transition: .2s opacity ease-in-out; }
+  
 
 .mbr-gallery .mbr-gallery-item > a:hover img {
   opacity: 1; }

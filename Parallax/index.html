@@ -78,15 +78,15 @@
     }
 
     #section-1 {
-        background-image: url("img/moonA.jpg");
+        background-image: url("https://picsum.photos/1000/800?random=1");
     }
 
     #section-2 {
-        background-image: url("img/moonB.jpg");
+        background-image: url("https://picsum.photos/1000/800?random=2");
     }
 
     #section-3 {
-        background-image: url("img/moonC.jpg");
+        background-image: url("https://picsum.photos/1000/800?random=3");
     }
 
     .section_style {
@@ -97,6 +97,9 @@
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+    }
+    .section_style a{
+        text-decoration:none;
     }
 
     .mask {
@@ -110,18 +113,29 @@
         background-color: rgba(141, 141, 150, 0.4));
         width: 200px;
         height: 100px;
+        text-align: center;
+        font-size: 30px ;
+        line-height:100px;
+        margin: auto;
+        color: white;
         border-radius: 15px;
         border: 2px solid gray;
-        margin: auto;
+       
+
     }
 
     .btn:hover {
-        background-color: green;
-        transition: 0.5s;
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
 
     .btn:active {
-        background-color: gray;
+        background: -webkit-linear-gradient(top, rgba(30, 154, 53, 1) 0%, rgba(126, 232, 135, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(30, 154, 53, 1) 0%, rgba(126, 232, 135, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         transition: 0.5s;
     }
 </style>
@@ -144,18 +158,23 @@
             <div class="clearfly"></div>
         </div>
         <div id="section-1" class="section_style">
-            <div class="mask">
-                <div class="btn"></div>
-            </div>
+            <a href="#">
+                <div class="mask">
+
+                    <div class="btn">我是A頁</div>
+                </div>
+            </a>
         </div>
         <div id="section-2" class="section_style">
             <div class="mask">
-                <div class="btn"></div>
+                <a href="#">
+                    <div class="btn">我是B頁</div>
+                </a>
             </div>
         </div>
         <div id="section-3" class="section_style">
             <div class="mask">
-                <div class="btn"></div>
+                <div class="btn">我是C頁</div>
             </div>
         </div>
     </div>

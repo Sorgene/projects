@@ -1,0 +1,87 @@
+.content_L {
+  position: relative;
+}
+
+.content_L .img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .content_L .img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 500px;
+  }
+}
+
+.content_L .text {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content_L .text {
+    padding-top: 550px;
+  }
+}
+
+.content_R {
+  position: relative;
+}
+
+.content_R .img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .content_R .img {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 800px;
+    height: 500px;
+  }
+}
+
+.border_outside {
+  padding-bottom: 120px;
+}
+
+.border_outside::before {
+  content: "";
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 45% 750px;
+  top: 30px;
+  position: absolute;
+  left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .border_outside::before {
+    padding: 0 45% 750px;
+    right: 15px;
+  }
+}
+
+.border_outside::after {
+  content: "";
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 45% 750px;
+  top: 75px;
+  position: absolute;
+  right: 15px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .border_outside::after {
+    padding: 0 40% 720px;
+    left: 30px;
+    right: 30px;
+    top: 45px;
+  }
+}
+/*# sourceMappingURL=type2.css.map */

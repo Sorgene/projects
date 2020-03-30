@@ -1,0 +1,319 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: "微軟正黑體", sans-serif;
+    color: #003A3E;
+    overflow-x: hidden !important;
+    font-size: 18px;
+    line-height: 1.5;
+}
+@font-face {
+    font-family: “文鼎明體”;
+    src: url(/webfonts/ARMingB5Heavy.otf);
+}
+
+.h1 {
+    font-size: 48px;
+}
+
+.h2 {
+    font-size: 24px;
+}
+
+.h3 {
+    font-size: 18px;
+    
+}
+.title_LH{
+    line-height: 110px;   
+}
+
+@media screen and (max-width: 768px) {
+    #nav1 {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 99;
+        top: 0;
+    }
+    .h1 {
+        font-size: 24px;
+    }
+    
+    .h2 {
+        font-size: 18px;
+    }
+    
+    .h3 {
+        font-size: 14px;
+    }
+    .title_LH{
+        line-height: 60px;
+    }
+}
+
+
+body a{     
+    color: #003A3E;
+    text-decoration: none
+}
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #003A3E;
+}
+.btn.btn-primary{
+    color: #003A3E;
+    background-color: #78C3B7;
+    border: none;
+}
+.btn.btn-primary:hover{
+    background-color: #003A3E;
+    color: #fff;
+    
+}
+
+.embFont01 {
+    font-family: “文鼎明體”;
+    font-size: 18px;
+    /* color: #78C3B7; */
+    color: #003A3E;
+    /* -webkit-text-fill-color: #78C3B7; */
+}
+
+
+#banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#banner img{
+    max-width: 100%;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+
+.bannerimg {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    /* transform: scale(1.2) ;
+    transition: transform 60s; */
+
+}
+
+
+
+.box {
+    width: 770px;
+    height: 470px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: rgba(255, 255, 255); */
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img{
+    max-width: 100%;
+    /* width: 600px; */
+    height: auto;
+}
+
+
+
+
+#backtop {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+}
+
+.nav2 {
+    position: fixed;
+    right: 50px;
+    top: calc(50vh - 60px);
+    z-index: 99;
+}
+
+.nav2 .nav-link {
+    padding: 0;
+}
+
+.nav2_btn {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.nav2 .nav-link.active .nav2_btn {
+    background-color: #000;
+}
+
+.v_text {
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
+    font-family: "文鼎明體";
+    line-height: unset;
+    margin: auto ;
+    padding-top: 48px;        
+}
+
+#myContainer {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /*this gives it the precise width to match the Bootstrap defaults*/
+}
+
+
+@media (max-width: 1200px) {
+    #myContainer {
+        width: 97.5%;
+        /*this gives it the precise width to match the Bootstrap defaults*/
+    }
+}
+.text_shadow{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+footer h3{
+    font-size: 24px;
+
+}
+/* footer p{
+    font-size: 14px;
+} */
+.loading{
+    color:#003A3E;
+    text-align: center;
+    font-size: 24px;
+    opacity: 0;
+    animation: blink 1.2s ease-in-out infinite alternate;
+    animation-delay:3s ;
+    /* display: inline-block; */
+    margin: 50px auto;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+}

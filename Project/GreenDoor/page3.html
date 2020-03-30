@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+        * {
+            font-family: 'Noto Sans TC';
+            /* outline: 1px solid red; */
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #F2E0C9;
+        }
+
+        .banner {
+            width: 100%;
+            height: calc(100vh - 80px);
+            background-image: url(/pic/wedding/婚禮.jpg);
+            background-position: bottom;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+        }
+        .banner p{
+            font-size: 120px;
+            font-family: 'Zhi Mang Xing', cursive;
+            text-align: center;
+            align-self: center;
+            margin: 0 auto;
+            color: white;
+            text-shadow:5px 5px #680E01
+        }
+        .navbar {
+            background-color: #736C49;
+        }
+
+        .back_to_top.show{
+            width: 50px;
+            height: 50px;
+            z-index: 10000;
+            background-image: url("/pic/arrow-01.png");
+            position: fixed;
+            right: 10vh;
+            bottom: 50px;
+            background-size: cover;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .mountaintop {
+            position: absolute;
+            bottom: -75px;
+            background-image: url(pic/mountaintop.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .mountainbtm {
+            position: absolute;
+            bottom: 0;
+            background-image: url(pic/mountainbtm.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        img {
+            height: 50vh;
+            display: block;
+            width: 50vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: #F0F5F3; */
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #fff;
+        }
+
+
+        #footer_text {
+            text-align: right;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .nav-link{
+            text-align: center;
+        }
+        .nav-item:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #DCDAD1;
+            width: 0;
+            -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        .nav-item:hover:after {
+            width: 100%;
+        }
+
+        @media (max-width: 992px) {
+
+            .banner {
+                height: 100vh;
+            }
+
+            .sticky-top {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1020;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .mountaintop {
+                bottom: -75px;
+            }
+
+            .back_to_top.show {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .mountaintop {
+                bottom: -40px;
+            }
+            .footer_text,
+            #footer_text {
+                text-align: center;
+            }
+            .banner p{
+                font-size: 80px;
+            }
+        }
+
+        .swiper-button-next {
+            background-image: url('/pic/arrow.svg');
+        }
+
+        .swiper-button-prev {
+            transform: rotate(180deg);
+            background-image: url('/pic/arrow.svg');
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner animated zoomIn slower">
+        <p>森之王子</p>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="row collapse navbar-collapse " id="navbarNav">
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link " href="/index.html">關於我們</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page2.html">客房介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page3.html">場地介紹</a>
+                </div>
+                <div class="col-12 col-lg-3 navbar-nav justify-content-center">
+                    <a class="nav-item nav-link" href="/page4.html">景點與交通</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="main">
+        <a href="#photo_top">
+            <div class="back_to_top">
+            </div>
+        </a>
+        <div class="background">
+            <div class="mountaintop" data-paroller-factor="0.2"></div>
+            <div class="mountainbtm"></div>
+        </div>
+        <div class="container pt-5 pb-3" id="photo_top">
+            <div class="row intro wedding">
+                <div class="col-xl-6 col-md-12 col-12">
+                    <div class="swiper-container" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮6.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮7.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮會場.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮會場2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/wedding/婚禮會場3.jpg" alt=""></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12 col-12 blockquote text-center align-self-center" data-aos="fade-left"
+                    data-aos-duration="3000" data-aos-delay="500">
+                    <p>婚宴租借</br>
+                        場地人數：150 - 300人</br>
+                        時段：07:00-15:00</br>15:00-22:00</br>
+                        費用：平日 30000元假日</br>
+                        35000元連續假日</br>
+                        45000元</p>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-3 " data-aos="fade-up" data-aos-duration="3000">
+            <div class="row intro">
+                <div class="col-xl-6 col-md-12 col-12 order-xl-0 order-md-1 order-1 blockquote text-center align-self-center"
+                    data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">
+                    <p>小型場地會議空間</br>
+                        租借人數：22-30人</br>
+                        時段：08:00-12:30</br>
+                        13:00-17:30</br>
+                        18:00-22:00</br>
+                        費用：平日 4800元</br>
+                        假日 5500元</br>
+                        連續假日 6800元 (擇一時段)</br></p>
+                </div>
+                <div class="col-xl-6 col-md-12 col-12 order-xl-1 order-md-0 order-0">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/餐廳6.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/1920 restaurant.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/1920 restaurant2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/1920 restaurant3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img src="/pic/restaurant/1920 restaurant4.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-5" data-aos="fade-up" data-aos-duration="3000">
+            <div class="row intro">
+                <div class="col-xl-6 col-md-12 col-12">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/pic/food/light meal.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/food/light meal2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img src="/pic/food/party.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/food/jam2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="/pic/food/foodiesfeed.com_cappuccino-with-a-smoothie-granola-bowl.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img
+                                    src="/pic/food/foodiesfeed.com_cooking-homemade-chicken-broth.jpg" alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="/pic/food/foodiesfeed.com_fried-quail-eggs-on-bread-with-butter-detail.jpg"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="/pic/food/foodiesfeed.com_pancakes-with-hot-caramel-and-ice-cream.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide"><img src="/pic/food/light meal.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/food/咖啡.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/pic/food/餐點3.jpg" alt=""></div>
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12 col-12 blockquote text-center align-self-center" data-aos="fade-left"
+                    data-aos-duration="3000" data-aos-delay="200" style=" text-shadow: 0.4px 0.4px white;">
+                    <p>烤肉區場地</br>
+                        租借人數：50人</br>
+                        時段：15:00-22:00</br>
+                        費用：平假日 5000元</br>
+                        跨年假期 8000元</br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" footer">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-md-6 col-xl-6 footer_text">
+                    <span>專線 | Tel 0987-816726<br>
+                        信箱 | Mail morilife520@gmail.com<br>
+                        地址 | Add 台中市新社區永源里井南街28號</span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6 footer_text" id="footer_text">
+                    <span>寵物友善<br>
+                        親子友善<br>
+                        check in: 4:00<br>
+                        check out: 11:00 </span>
+                </div>
+                <div class="col-12 text-center">
+                    <p>僅供學習使用，如有侵權，請來電告知刪除</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="jquery.paroller.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+
+
+
+        AOS.init({
+            throttleDelay: 99,
+            once: false,
+            anchorPlacement: 'top-bottom',
+        });
+
+        $(".nav-item").click(function () {
+            $(this).addClass("active");
+        });
+
+        $('.mountaintop').paroller();
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop);
+
+            if (scrollTop > 500) {
+                $(".back_to_top").addClass("show");
+            } else {
+                $(".back_to_top").removeClass("show");
+            };
+        });
+
+        $(".back_to_top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        })
+    </script>
+
+</body>
+
+</html>

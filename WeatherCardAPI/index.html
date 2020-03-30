@@ -124,12 +124,12 @@
                     if (Wx_code == 1) {
                         var weather_icon = './img/weather/sun.png'
                     } else if (Wx_code == 2 || Wx_code == 3) {
-                        var weather_icon = './img/weather/cloudy.png'
+                        var weather_icon = './img/weather/suncloudy.png'
                     } else if (Wx_code == 4 || Wx_code == 5 || Wx_code == 6 || Wx_code == 7) {
                         var weather_icon = './img/weather/cloudy.png'
-                    } else if (Wx_code == 8 || Wx_code == 9 || Wx_code == 10 || Wx_code == 11) {
+                    } else if (Wx_code == 8  ){
                         var weather_icon = './img/weather/cloud.png'
-                    } else {
+                     } else {
                         var weather_icon = './img/weather/rain.png'
                     };
                     var cards = document.querySelector('.cards');
@@ -143,11 +143,11 @@
                                 <h1>${location_Name}</h1>
                                 <h2>${Wx}</h2>
                                 
-                                <p>舒適度:${Ci}</p>
-                                <p>=================</p>
+                                <p>舒適度:<br>${Ci}</p>
+                               <br>
                                 <p>最高溫:${MaxT}${TUNit}</p>
                                 <p>最低溫${MinT}${TUNit}</p>
-                                <p>=================</p>
+                               <br>
                                 
                             </div>
                         `

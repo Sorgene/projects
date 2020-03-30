@@ -127,9 +127,11 @@
                         var weather_icon = './img/weather/suncloudy.png'
                     } else if (Wx_code == 4 || Wx_code == 5 || Wx_code == 6 || Wx_code == 7) {
                         var weather_icon = './img/weather/cloudy.png'
-                    } else if (Wx_code == 8  ){
+                    } else if (Wx_code === 8) {
                         var weather_icon = './img/weather/cloud.png'
-                     } else {
+                    } else if (Wx_code == 9 || Wx_code == 10 || Wx_code == 11 || Wx_code == 12) {
+                        var weather_icon = './img/weather/rain.png'
+                    } else {
                         var weather_icon = './img/weather/rain.png'
                     };
                     var cards = document.querySelector('.cards');

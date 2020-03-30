@@ -556,6 +556,7 @@ body {
         right: 0px;
         max-width: 1000px;
 
+
         @media (max-width: 1940px) {
             max-width: 900px;
         }
@@ -570,6 +571,10 @@ body {
 
         @media (max-width: 767px) {
             max-width: 60vw;
+        }
+
+        img {
+            width: 100%;
         }
     }
 
@@ -692,7 +697,9 @@ body {
                     &:focus,
                     &:active {
                         background-color: white;
-
+                        p, .title{
+                            color: black;
+                        }
                         .icon {
                             fill: black;
                         }
@@ -710,7 +717,9 @@ body {
                     &:focus,
                     &:active {
                         background-color: white;
-
+                        p, .title{
+                            color: black;
+                        }
                         .icon {
                             fill: black;
                         }
@@ -724,6 +733,9 @@ body {
                     &:focus,
                     &:active {
                         background-color: white;
+                        p, .title{
+                            color: black;
+                        }
                     }
                 }
 
@@ -734,6 +746,9 @@ body {
                     &:focus,
                     &:active {
                         background-color: white;
+                        p, .title{
+                            color: black;
+                        }
                     }
                 }
             }

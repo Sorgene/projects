@@ -540,6 +540,10 @@ body {
   }
 }
 
+.styledEngagingImmersive .media img {
+  width: 100%;
+}
+
 .styledSpace {
   width: 100%;
   height: 100vh;
@@ -659,6 +663,10 @@ body {
   background-color: white;
 }
 
+.styledMedia .inner .grid .item:nth-child(1):hover p, .styledMedia .inner .grid .item:nth-child(1):hover .title, .styledMedia .inner .grid .item:nth-child(1):focus p, .styledMedia .inner .grid .item:nth-child(1):focus .title, .styledMedia .inner .grid .item:nth-child(1):active p, .styledMedia .inner .grid .item:nth-child(1):active .title {
+  color: black;
+}
+
 .styledMedia .inner .grid .item:nth-child(1):hover .icon, .styledMedia .inner .grid .item:nth-child(1):focus .icon, .styledMedia .inner .grid .item:nth-child(1):active .icon {
   fill: black;
 }
@@ -675,6 +683,10 @@ body {
   background-color: white;
 }
 
+.styledMedia .inner .grid .item:nth-child(2):hover p, .styledMedia .inner .grid .item:nth-child(2):hover .title, .styledMedia .inner .grid .item:nth-child(2):focus p, .styledMedia .inner .grid .item:nth-child(2):focus .title, .styledMedia .inner .grid .item:nth-child(2):active p, .styledMedia .inner .grid .item:nth-child(2):active .title {
+  color: black;
+}
+
 .styledMedia .inner .grid .item:nth-child(2):hover .icon, .styledMedia .inner .grid .item:nth-child(2):focus .icon, .styledMedia .inner .grid .item:nth-child(2):active .icon {
   fill: black;
 }
@@ -687,12 +699,20 @@ body {
   background-color: white;
 }
 
+.styledMedia .inner .grid .item:nth-child(3):hover p, .styledMedia .inner .grid .item:nth-child(3):hover .title, .styledMedia .inner .grid .item:nth-child(3):focus p, .styledMedia .inner .grid .item:nth-child(3):focus .title, .styledMedia .inner .grid .item:nth-child(3):active p, .styledMedia .inner .grid .item:nth-child(3):active .title {
+  color: black;
+}
+
 .styledMedia .inner .grid .item:nth-child(4) {
   background-color: gainsboro;
 }
 
 .styledMedia .inner .grid .item:nth-child(4):hover, .styledMedia .inner .grid .item:nth-child(4):focus, .styledMedia .inner .grid .item:nth-child(4):active {
   background-color: white;
+}
+
+.styledMedia .inner .grid .item:nth-child(4):hover p, .styledMedia .inner .grid .item:nth-child(4):hover .title, .styledMedia .inner .grid .item:nth-child(4):focus p, .styledMedia .inner .grid .item:nth-child(4):focus .title, .styledMedia .inner .grid .item:nth-child(4):active p, .styledMedia .inner .grid .item:nth-child(4):active .title {
+  color: black;
 }
 
 .styledNews {
